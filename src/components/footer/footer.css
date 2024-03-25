@@ -1,0 +1,28 @@
+footer{
+    background: #3fadad;
+    
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
+
+.footer-divs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.contact,.mail,.addre,.fax{
+    color: #fff;
+}
+.copy{
+    text-align: right;
+    color: #fff;
+    margin-top: 10px;
+}

@@ -1,0 +1,80 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+
+.nav-item{
+    list-style: none;
+    color: #fff;
+    font-size: 1rem;
+}
+/* 
+.nav-link{
+    list-style : none;
+    color: #fff;
+    font-size: 1.0rem ;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    text-transform:  capitalize;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s;
+}
+.nav-link:hover{
+    border-bottom: 3px solid white;
+} */
+
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+.nav-link.active::before {
+    width: 100%;
+    transition: none; 
+}
+.logout-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: #fff; /* Change color to match your design */
+    /* text-decoration: underline; */
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+
+
+
+
+
+

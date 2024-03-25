@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Megrim&display=swap');
+/* .form{
+    /* border: 2px solid yellow; 
+} */
+
+.form-elements{
+    /* border: 2px solid green; */
+    /* box-sizing: border-box; */
+    padding-left: 450px;
+    padding-top: 3rem;
+    color: white;
+    display:grid;
+    gap: 20px;
+}
+#form-name>input{
+   margin-left: 80px;
+   
+}
+#form-email>input{
+    margin-left: 80px;
+    
+ }
+ #form-contact>input{
+    margin-left: 12px;
+    
+ }
+ #form-dob>input{
+    margin-left: 35px;
+    
+ }
+ #form-branch>input{
+    margin-left: 73px;
+    
+ }
+ #form-address> textarea{
+    margin-left: 68px;
+    
+ }
+ #form-address> label{
+
+ }
+
+ .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -140px;
+    margin-top: 15px;
+ }
+input{
+     width: 250px;
+} 
+h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Megrim",cursive;
+    text-shadow: 
+        0 0 5px #0bf4f3,
+        0 0 10px #0bf4f3,
+        0 0 20px #0bf4f3,
+        0 0 40px #0bf4f3,
+        0 0 80px #0bf4f3;
+
+}
+#button {
+    border: none;
+  background-color: #0bf4f3;
+  box-shadow: 0 0 5px #0bf4f3;
+    color: #fff;
+    border-radius: 20px; 
+  width: 100px;
+  height: 33px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  }
+  #button:hover {
+    box-shadow: 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 20px black ;  
+    background: #0bf4f3;
+    color: black;
+}
+  
