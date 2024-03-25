@@ -20,7 +20,7 @@ const Patients = () => {
     // Function to fetch patients list
     const fetchPatients = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/patient/all');
+        const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
         setPatients(response.data);
       } catch (error) {
         console.error('Error fetching patients:', error);
@@ -34,9 +34,9 @@ const Patients = () => {
   // Function to handle deleting a patient
   const deletePatient = async (patientId) => {
     try {
-      await axios.delete(`http://localhost:8081/patient/delete/${patientId}`);
+      await axios.delete(`http://hospital-app-hb46.onrender.com/patient/delete/${patientId}`);
       // After deletion, fetch the updated list of patients
-      const response = await axios.get('http://localhost:8081/patient/all');
+      const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
       setPatients(response.data);
     } catch (error) {
       console.error('Error deleting patient:', error);
@@ -89,9 +89,9 @@ const saveEditedPatient = async () => {
       "address": editedPatient.address
     };
 
-    await axios.put(`http://localhost:8081/patient/update/${editedPatient.patientId}`, formData);
+    await axios.put(`http://hospital-app-hb46.onrender.com/patient/update/${editedPatient.patientId}`, formData);
     // After updating, fetch the updated list of patients
-    const response = await axios.get('http://localhost:8081/patient/all');
+    const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
     setPatients(response.data);
     setEditedPatient(null); // Reset editedPatient state after saving
   } catch (error) {
@@ -105,10 +105,10 @@ const saveEditedPatient = async () => {
       let response;
       if (!isNaN(patientName)) {
         // If patientName is a number, fetch by contact number
-        response = await axios.get(`http://localhost:8081/patient/contact/${patientName}`);
+        response = await axios.get(`http://hospital-app-hb46.onrender.com/patient/contact/${patientName}`);
       } else {
         // If patientName is a string, fetch by patient name
-        response = await axios.get(`http://localhost:8081/patient/${patientName}`);
+        response = await axios.get(`http://hospital-app-hb46.onrender.com/patient/${patientName}`);
       }
       setPatients(response.data);
     } catch (error) {
