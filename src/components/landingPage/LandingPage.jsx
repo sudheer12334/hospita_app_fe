@@ -13,7 +13,7 @@ const LandingPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8081/api/user/login', {
+      const response = await axios.post('https://hospital-app-hb46.onrender.com/api/user/login', {
         username: username,
         password: password
       });

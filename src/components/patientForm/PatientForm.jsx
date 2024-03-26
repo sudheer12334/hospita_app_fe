@@ -53,7 +53,7 @@ const PatientForm=()=>{
             }
 
         
-              const response = await axios.post('http://localhost:8081/patient/save', formData);
+              const response = await axios.post('https://hospital-app-hb46.onrender.com/patient/save', formData);
         
               alert('Patient details saved successfully');
               console.log('Patient details saved successfully:', response.data);

@@ -19,7 +19,6 @@ const AppRoutes=()=>{
          <AuthProvider>
         <Router>  
           <Header/>
-          
             <Routes>
                 <Route path='/' element={<LandingPage/>}></Route>
                 <Route path='/form' element={<PatientForm/>}></Route>
