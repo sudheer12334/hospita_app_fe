@@ -20,7 +20,8 @@ const Patients = () => {
     // Function to fetch patients list
     const fetchPatients = async () => {
       try {
-        const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
+        const response = await axios.get('https://hospital-app-hb46.onrender.com/patient/all');
+       
         setPatients(response.data);
       } catch (error) {
         console.error('Error fetching patients:', error);
@@ -34,9 +35,9 @@ const Patients = () => {
   // Function to handle deleting a patient
   const deletePatient = async (patientId) => {
     try {
-      await axios.delete(`http://hospital-app-hb46.onrender.com/patient/delete/${patientId}`);
+      await axios.delete(`https://hospital-app-hb46.onrender.com/patient/delete/${patientId}`);
       // After deletion, fetch the updated list of patients
-      const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
+      const response = await axios.get('https://hospital-app-hb46.onrender.com/patient/all');
       setPatients(response.data);
     } catch (error) {
       console.error('Error deleting patient:', error);
@@ -89,9 +90,10 @@ const saveEditedPatient = async () => {
       "address": editedPatient.address
     };
 
-    await axios.put(`http://hospital-app-hb46.onrender.com/patient/update/${editedPatient.patientId}`, formData);
+    await axios.put(`https://hospital-app-hb46.onrender.com/patient/update/${editedPatient.patientId}`, formData);
     // After updating, fetch the updated list of patients
-    const response = await axios.get('http://hospital-app-hb46.onrender.com/patient/all');
+    const response = await axios.get('https://hospital-app-hb46.onrender.com/patient/all');
+    
     setPatients(response.data);
     setEditedPatient(null); // Reset editedPatient state after saving
   } catch (error) {
