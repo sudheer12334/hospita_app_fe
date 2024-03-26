@@ -107,10 +107,10 @@ const saveEditedPatient = async () => {
       let response;
       if (!isNaN(patientName)) {
         // If patientName is a number, fetch by contact number
-        response = await axios.get(`http://hospital-app-hb46.onrender.com/patient/contact/${patientName}`);
+        response = await axios.get(`https://hospital-app-hb46.onrender.com/patient/contact/${patientName}`);
       } else {
         // If patientName is a string, fetch by patient name
-        response = await axios.get(`http://hospital-app-hb46.onrender.com/patient/${patientName}`);
+        response = await axios.get(`https://hospital-app-hb46.onrender.com/patient/${patientName}`);
       }
       setPatients(response.data);
     } catch (error) {
